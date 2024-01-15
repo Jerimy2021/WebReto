@@ -1,12 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="page-container">
+    <the-navigation></the-navigation>
+    <router-view />
+  </div>
 </template>
 
 <style>
+.page-container {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr; /* Same grid structure as TheNavigation */
+  height: 100vh;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,17 +19,13 @@
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+
+<script>
+import TheNavigation from './components/TheNavigation.vue';
+
+export default {
+  name: 'App',
+  components: { TheNavigation },
+};
+</script>
