@@ -8,7 +8,7 @@
 <style>
 .page-container {
   display: grid;
-  grid-template-columns: 0.25fr 1fr; /* Same grid structure as TheNavigation */
+  grid-template-columns: 0.25fr 1fr;
   height: 100vh;
 }
 

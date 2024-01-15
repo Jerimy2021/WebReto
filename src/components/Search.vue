@@ -10,7 +10,6 @@
       <h2>{{ countryInfo.name.common }}</h2>
       <p>Capital: {{ countryInfo.capital[0] }}</p>
       <img :src="countryInfo.flags.png" alt="Flag" />
-      <!-- Agrega más información que desees mostrar -->
     </div>
     <div v-else>
       <p>No se encontraron resultados.</p>
@@ -32,19 +31,15 @@ export default {
   methods: {
     async searchCountry() {
       try {
-        // Verificar si la barra de búsqueda no está vacía
         if (this.searchQuery.trim() === '') {
-          this.countryInfo = null; // Establecer a null si está vacío
+          this.countryInfo = null; 
           return;
         }
 
         const response = await axios.get(`https://restcountries.com/v3.1/all`);
-        // Filtra los países basándote en la búsqueda
         const filteredCountries = response.data.filter(country =>
           country.name.common.toLowerCase().includes(this.searchQuery.toLowerCase())
         );
-
-        // Toma el primer país coincidente (puedes ajustar esto según tus necesidades)
         this.countryInfo = filteredCountries.length > 0 ? filteredCountries[0] : null;
         console.log('Country Info:', this.countryInfo);
       } catch (error) {

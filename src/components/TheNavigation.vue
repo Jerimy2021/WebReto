@@ -25,7 +25,7 @@ export default {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   height: 100vh;
-  margin: 0;  /* Remove any default margin */
+  margin: 0;
 }
 
 .left {
@@ -34,7 +34,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0;  /* Remove any default margin */
+  margin: 0; 
 }
 .logo {
   margin-top: 20px;
@@ -57,7 +57,7 @@ export default {
 }
 
 .rutas {
-  margin-top: 20px; /* Espaciado entre el logo y los enlaces */
+  margin-top: 20px;
 }
 
 nav ul {
@@ -67,7 +67,7 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+  margin-bottom: 10px; 
 }
 
 .router-link {
@@ -78,7 +78,7 @@ nav li {
 }
 
 .router-link:hover {
-  color: #f00; /* Cambia el color al pasar el ratón sobre el enlace */
+  color: #f00; 
 }
 
 </style>

@@ -43,8 +43,6 @@
   
   const { result } = useQuery(ALL_COUNTRIES);
   const countries = computed(() => result.value?.countries ?? []);
-  
-  // Use computed to sort the countries by name
   const sortedCountries = computed(() => {
     return countries.value.slice().sort((a, b) => a.name.localeCompare(b.name));
   });
